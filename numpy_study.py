@@ -15,3 +15,18 @@ print(sample_array.shape) # 형태
 print(sample_array.size) # 원소의 수
 print(sample_array.dtype) # 저장된 데이터 타입
 print(sample_array.ndim) # 배열의 축(차원) 수
+
+
+# 데이터 타입 변경 : ndarray.astype(type)
+new_arr = sample_array.astype(str)
+
+
+# 기본 연산(연산기호 사용하거나 함수 사용하거나) => 모든 연산은 배열의 각 요소별로 적용됨
+# 비교연산자를 넣으면 True False값 반환
+a = np.arange(1, 13).reshape(2, 2, 3)
+b = np.arange(12, 0, -1).reshape(2, 2, 3)
+print(a + b)
+print(np.add(a,b))
+print('--------------------------------------')
+print(a - b)
+print(np.subtract(a, b))
