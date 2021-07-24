@@ -24,3 +24,13 @@ sample_seires = pd.Series(data=score, name='score')
 sample_seires.index.name = 'f_n'
 print("\nSeires 생성 2")
 print(sample_seires)
+
+
+# Series의 주요 속성
+print('\n Series객체의 주요 속성')
+print(sample_seires.index) # 인덱스 정보
+print(sample_seires.index.name) # 인덱스의 이름
+print(sample_seires.name) # column의 이름(한개의 행 밖에 없지만)
+print(sample_seires.values) # 저장된 데이터
+print(sample_seires.dtype) # 저장된 데이터의 데이터형
+print(sample_seires.shape) # 객체의 형태
