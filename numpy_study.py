@@ -58,3 +58,10 @@ print(sample_array[0,1,2]) # 첫번째 축에서 0번째, 두번째 축에서 1�
 sample_array[0,1,2] = 100 # 특정값 변경 -> 변경할 데이터의 자리 = 변경할 데이터
 print(sample_array[0,1,2])
 
+
+# 슬라이싱
+print("\n슬라이싱")
+sample_array = np.arange(24).reshape(2, 3, 4)
+print("<sample array 생성>\n",sample_array)
+print("\n",sample_array[:, 2, 0:2])
+
