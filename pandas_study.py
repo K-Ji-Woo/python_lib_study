@@ -55,9 +55,17 @@ print(sample_df.dtypes) # 데이터 타입
 print(sample_df.shape) # 데이터 형태
 
 
-# 인덱스 및 칼럼명 추가 방법
+# 인덱스 및 칼럼명 추가 방법(DataFrame 객체 생성할 때 파라미터로 넣어주는 방법도 있음)
 sample_df.index = ['a', 'b', 'c', 'd']
 sample_df.columns = ['이름', '점수', '평가등급']
 print('\n인덱스와 칼럼명 추가\n', sample_df)
 print(sample_df.index) 
 print(sample_df.columns) 
+
+
+# DataFrame의 데이터 살펴보기
+print("\n데이터 살펴보기")
+print('\n전반적인 정보 제공\n', sample_df.info())
+print('\n.head()\n', sample_df.head(2)) # defualt값은 5
+print('\n.tail()\n', sample_df.tail(3)) # defualt값은 5
+print('\n.sample()\n', sample_df.sample(2)) 
