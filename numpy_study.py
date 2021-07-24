@@ -65,3 +65,15 @@ sample_array = np.arange(24).reshape(2, 3, 4)
 print("<sample array 생성>\n",sample_array)
 print("\n",sample_array[:, 2, 0:2])
 
+
+# 데이터 정렬(axis에 따라 정렬 방향 바뀜)
+# np.sort()는 기본적으로 오름차순 정렬만 지원(pandas는 옵션으로 내림차순도 가능)
+# numpy에서 내림차순 정렬하는 법 -> 1. 오름차순으로 정렬 2. [::-1] 명령을 주어 역으로 출력
+print("\n np.sort()")
+arr = [[5, 2, 7],
+       [4, 9, 11]]
+sample_array = np.array(arr)
+print("sample array 생성\n", sample_array)
+print("오름차순 정렬\n", np.sort(sample_array))
+result = np.sort(sample_array)
+print("\n내림차순 정렬\n", result[::-1])
