@@ -49,6 +49,12 @@ print(a.max())
 print(a.min())
 
 
-
-
+# 인덱싱
+# 축에 맞춰 해당하는 인덱스 넣어주기
+print("\n인덱싱")
+sample_array = np.arange(24).reshape(2, 3, 4)
+print("<sample array 생성>\n",sample_array)
+print(sample_array[0,1,2]) # 첫번째 축에서 0번째, 두번째 축에서 1번째, 세번째 축에서 2번째
+sample_array[0,1,2] = 100 # 특정값 변경 -> 변경할 데이터의 자리 = 변경할 데이터
+print(sample_array[0,1,2])
 
