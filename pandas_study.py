@@ -53,3 +53,11 @@ print(sample_df.columns) # 칼럼
 print(sample_df.values) # 저장된 데이터
 print(sample_df.dtypes) # 데이터 타입
 print(sample_df.shape) # 데이터 형태
+
+
+# 인덱스 및 칼럼명 추가 방법
+sample_df.index = ['a', 'b', 'c', 'd']
+sample_df.columns = ['이름', '점수', '평가등급']
+print('\n인덱스와 칼럼명 추가\n', sample_df)
+print(sample_df.index) 
+print(sample_df.columns) 
