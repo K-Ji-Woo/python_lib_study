@@ -87,6 +87,16 @@ print('\n수치형 데이터 describe()\n', df.describe())
 print('\n범주형 데이터 describe()\n', df[['name','grade', 'subject']].describe())
 print('\n모든 열에 대한 describe()\n', df.describe(include='all'))
 
+# df.unque() : 범주형 데이터의 고유한 종류 반환
+print('\ndf.uniqe()')
+print(df['name'].unique())
+# df.value_counts() : 범주형 데이터의 각 항목의 빈도수 반환 / 인자로 normalize=True : 비율 반환
+print('\ndf.value_counts()')
+print(df['grade'].value_counts())
+print(df['grade'].value_counts(normalize=True))
+
+
+
 
 
 
