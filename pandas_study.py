@@ -69,3 +69,25 @@ print('\n전반적인 정보 제공\n', sample_df.info())
 print('\n.head()\n', sample_df.head(2)) # defualt값은 5
 print('\n.tail()\n', sample_df.tail(3)) # defualt값은 5
 print('\n.sample()\n', sample_df.sample(2)) 
+
+
+# 수치형과 범주형 데이터
+# 수치형데이터 : 관측된 값이 연속적으로 측정된 데이터 / 산술적인 연산(평군, 중앙값, 표준편차 등)이 의미가 있음
+# 범주형 데이터 : 범주나 항목으로 표현할 수 있는 데이터 / 수치적인 의미 x / 범주의 종류나 빈도수로 접근
+score = {'name': ['Jessi', 'Emma', 'Alex', 'Jessi', 'Tom'],
+         'age': [20, 24, 23, 20, 27],
+         'score': [100, 95, 80, 85, 97],
+         'grade': ['A', 'A', 'B', 'B', 'A'],
+         'subject':['python', 'java', 'python', 'c', 'java']}
+
+df = pd.DataFrame(data=score)
+
+# df.describe() : 수치형 데이터의 기술통계, 범주형 데이터의 빈도수 관련 정보 반환 / defualt -> 수치형 데이터만 알아서 파악
+print('\n수치형 데이터 describe()\n', df.describe())
+print('\n범주형 데이터 describe()\n', df[['name','grade', 'subject']].describe())
+print('\n모든 열에 대한 describe()\n', df.describe(include='all'))
+
+
+
+
+
